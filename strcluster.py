@@ -93,7 +93,7 @@ class StringClusterMap(PluginForm):
 			'00e0070000c00300008001000000000000000000000000000000000000000000000000'
 			'00000000000000000000000000000000000080010000c0030000e0070000')
 		image = QtGui.QImage()
-		image.loadFromData(QtCore.QByteArray.fromHex(icon))
+		image.loadFromData(QtCore.QByteArray.fromHex(bytes(icon, 'latin1')))
 		pixmap = QtGui.QPixmap()
 		pixmap.convertFromImage(image)
 		return QtGui.QIcon(pixmap)
